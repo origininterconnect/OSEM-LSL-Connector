@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0-rc",
+  "productName": "OSEM-LSL-Connector",
+  "version": "0.1.0",
+  "identifier": "OSEM-LSL-Connector",
+  "build": {
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:3000",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "OSEM LSL Connector",
+        "width": 500,
+        "height": 200,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "deb",   
+      "msi",    
+      "dmg",   
+      "rpm"   
+    ],
+    "icon": [
+      "icons/oric_logo(300x300px).png",
+      "icons/oric_logo.ico"
+    ]
+  }
+}
